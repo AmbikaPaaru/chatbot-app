@@ -1,0 +1,41 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+.initialText {
+  color: #666;
+  text-align: center;
+}
+.btnStyle {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.msgDiv {
+  border: 1px solid #ccc;
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.inputBar {
+  display: flex;
+  gap: 10px;
+}
+.searchBar {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.msgInnerDiv {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
