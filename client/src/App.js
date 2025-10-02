@@ -50,21 +50,26 @@ function App() {
       <h2>ChatGPT Clone</h2>
       <div className={styles.msgDiv}>
         {messages?.length === 0 ? (
-          <p className={styles.initialText}>Ready when you are.</p>
+          <p className={styles.initialText}>
+            Hi, I'm a Chat Bot. What can I help you with today?
+          </p>
         ) : (
           messages?.map((msg, i) => (
             <div
               key={i}
-              className={styles.msgInnerDiv}
-              style={{
-                textAlign: msg.role === "user" ? "right" : "left",
-                backgroundColor: msg.role === "user" ? "#e3f2fd" : "#f5f5f5",
-              }}
+              className={`${styles.msgWrapper} ${
+                msg.role === "user" ? styles.user : "assistant"
+              }`}
             >
-              <p>
-                <strong>{msg?.role === "user" ? "You" : "Assistant"}</strong>
-              </p>
-              <div>
+              <div
+                className={styles.msgInnerDiv}
+                style={{
+                  backgroundColor: msg.role === "user" ? "#e3f2fd" : "#f5f5f5",
+                }}
+              >
+                <p>
+                  <strong>{msg.role === "user" ? "You" : "Chat Bot"}</strong>
+                </p>
                 {msg.content.split("\n").map((line, idx) => (
                   <p key={idx}>{line}</p>
                 ))}
@@ -74,6 +79,7 @@ function App() {
         )}
         <div ref={messagesEndRef} />
       </div>
+
       <div className={styles.inputBar}>
         <input
           value={input}
