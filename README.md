@@ -8,11 +8,11 @@
    example: OPENAI_API_KEY= ########
 
 ## Run Backend
-cd server
-npm install
-npm start
+1. cd server
+2. npm install
+3. npm start
 
 ## Run Frontend
-cd client
-npm install
-npm run dev
+1. cd client
+2. npm install
+3. npm run dev
